@@ -12,6 +12,7 @@ class Director:
             self._cue_action("update")
             self._cue_action("output")
             sleep(constants.FRAME_LENGTH)
+
     def _cue_action(self, tag):
         
         for action in self._script[tag]:

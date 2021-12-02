@@ -6,8 +6,10 @@ class Actor():
         self._position = Point(0,0)
         self._text = ""
         self._velocity = Point(0,0)
+   
     def set_text(self,text): #called from main
         self._text = text
+    
     def set_position(self,position):
         self._position = position
    
@@ -22,3 +24,13 @@ class Actor():
     
     def get_text(self):
         return self._text
+    
+    def get_length(self):
+        return len(self._text)
+
+# class Paddle(Actor):
+    # def __init__(self):
+        # super().__init__()
+        # paddle_hitbox = []
+        # for character in self._text:
+            # paddle_hitbox.append(Point(

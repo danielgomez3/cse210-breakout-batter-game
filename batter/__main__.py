@@ -16,16 +16,14 @@ def main(screen):
     # create the cast {key: tag, value: list}
     cast = {}
     
-    x = int(constants.MAX_X / 2)
+    x = int(constants.MAX_X / 2) #NOTE this is the paddle span point
     y = int(constants.MAX_Y - 1)
     position = Point(x, y) #lets pass x and y
                             #now position will exists, let's fuse it with paddle
     paddle = Actor() #paddle is an Actor now
-    paddle.set_text("===========") #IOW, actor.set_text
-                #paddle is now a unique version of actor!
-                #everything will be saved into actor now in memory!
-    paddle.set_position(position) #fusing position with paddle now!
-    cast["paddle"] = [paddle] #now put it into to cast{} as a set!
+    paddle.set_text("===========")
+    paddle.set_position(position) 
+    cast["paddle"] = [paddle] 
    
     cast["brick"] = []
     for x in range(5, 75):  #now we need to make about 5-75 bricks
